@@ -1,5 +1,5 @@
 
-# calculate_codon_freqs
+# GeneTicker
 
 A small utility for calculating codon frequencies from GenBank (GBFF) files.
 
