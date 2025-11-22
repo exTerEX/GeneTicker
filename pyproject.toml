@@ -1,7 +1,6 @@
 [project]
 
 name = "GeneTicker"
-version = "0.1.0"
 description = "A command-line tool to calculate codon usage frequency from GenBank (GBFF) files."
 requires-python = ">=3.8"
 license = { text = "MIT" }
@@ -9,7 +8,7 @@ authors = [{ name = "Andreas Sagen", email = "a.s.sagen@odont.uio.no" }]
 keywords = ["biopython", "genbank", "bioinformatics", "codon-usage"]
 dependencies = ["biopython>=1.81", "pandas>=2.0.0"]
 dynamic = [
-    #"version",
+    "version",
     "readme",
 ]
 classifiers = [
@@ -23,7 +22,7 @@ classifiers = [
 [build-system]
 requires = [
     "setuptools>=61.0",
-    #"setuptools-scm"
+    "setuptools-scm"
 ]
 build-backend = "setuptools.build_meta"
 
