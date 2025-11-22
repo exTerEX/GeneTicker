@@ -1,0 +1,54 @@
+[project]
+
+name = "GeneTicker"
+version = "0.1.0"
+description = "A command-line tool to calculate codon usage frequency from GenBank (GBFF) files."
+requires-python = ">=3.8"
+license = { text = "MIT" }
+authors = [{ name = "Andreas Sagen", email = "a.s.sagen@odont.uio.no" }]
+keywords = ["biopython", "genbank", "bioinformatics", "codon-usage"]
+dependencies = ["biopython>=1.81", "pandas>=2.0.0"]
+dynamic = [
+    #"version",
+    "readme",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Scientific/Engineering :: Bio-Informatics",
+]
+
+[build-system]
+requires = [
+    "setuptools>=61.0",
+    #"setuptools-scm"
+]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.dynamic]
+readme = { file = "README.md" }
+
+[tool.setuptools_scm]
+
+[project.optional-dependencies]
+# Dependencies needed for specific export formats supported by the script
+excel = ["openpyxl"]
+xml = ["lxml"]
+arrow = ["pyarrow"]
+parquet = ["pyarrow"]
+orc = ["pyarrow"]
+hadoop = ["pyarrow"]
+all = [
+    "openpyxl",
+    "lxml",
+    "pyarrow"
+]
+
+[tool.setuptools.packages.find]
+include = ["GeneTicker"]
+
+[project.scripts]
+gtick = "GeneTicker.cli:main"
+geneticker = "GeneTicker.cli:main"

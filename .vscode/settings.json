@@ -1,0 +1,24 @@
+{
+    "python.languageServer": "Pylance",
+    "editor.defaultFormatter": "charliermarsh.ruff",
+    "files.exclude": {
+        "**/.git": true,
+        "**/*.egg-info": true,
+        "**/pyvenv.cfg": true,
+        "**/venv": true,
+        "**/include/python*": true,
+        "**/__pycache__": true,
+        "**/.cache": false,
+        "**/Pipfile.lock": true,
+    },
+    "autoDocstring.docstringFormat": "sphinx",
+    "python.testing.unittestArgs": [
+        "-v",
+        "-s",
+        "./tests",
+        "-p",
+        "test_*.py"
+    ],
+    "python.testing.pytestEnabled": false,
+    "python.testing.unittestEnabled": true
+}
