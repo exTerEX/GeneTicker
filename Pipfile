@@ -4,9 +4,9 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-pandas = "*"
+pandas = ">=2"
+biopython = ">=1.78"
 openpyxl = "*"
-biopython = "*"
 pyarrow = "*"
 
 [dev-packages]

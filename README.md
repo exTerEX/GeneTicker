@@ -29,7 +29,13 @@ pip install git+https://github.com/exTerEX/GeneTicker@v0.1.0
 If you want to install optional dependencies (all, excel, hadoop, arrow, parquet, orc)
 
 ```bash
-pip install GeneTicker[all] @ git+https://github.com/exTerEX/GeneTicker
+pip install GeneTicker[all]@git+https://github.com/exTerEX/GeneTicker
+```
+
+or
+
+```bash
+pip install GeneTicker[all]@git+https://github.com/exTerEX/GeneTicker@v0.1.0
 ```
 
 2. Example usage:
