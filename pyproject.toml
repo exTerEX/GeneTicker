@@ -45,6 +45,13 @@ all = [
     "pyarrow"
 ]
 
+[dependency-groups]
+dev = [
+    "ipykernel",
+    "pytest",
+    "flake8",
+]
+
 [tool.setuptools.packages.find]
 include = ["GeneTicker"]
 

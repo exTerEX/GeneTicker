@@ -3,7 +3,7 @@
 import argparse
 from pathlib import Path
 
-from GeneTicker.core import DEFAULT_MIN_FREQ, run_codon_analysis
+from GeneTicker.core import run_codon_analysis
 
 
 def main():
@@ -30,11 +30,11 @@ def main():
         help="Optional: The path and filename for the output file. Format is inferred from the extension (.csv, .xlsx, .json, etc.). If not provided, results are printed to the console.",
     )
 
-    # New flag to disable the frequency filter
+    # Flag to include non-canonical codon-AA pairs
     parser.add_argument(
-        "--no-freq-filter",
+        "--include-non-canonical",
         action="store_true",
-        help=f"Do not filter out low-frequency codons. By default, codons with < {DEFAULT_MIN_FREQ:.2f}%% frequency are removed.",
+        help="Include non-canonical codon-amino acid pairs in the output. By default, only canonical pairs (according to the detected translation table) are included.",
     )
 
     parser.add_argument(
@@ -50,7 +50,7 @@ def main():
     run_codon_analysis(
         input_file=args.input_file,
         output=args.output,
-        no_freq_filter=args.no_freq_filter,
+        include_non_canonical=args.include_non_canonical,
         verbose=args.verbose,
     )
 
